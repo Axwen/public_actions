@@ -6,7 +6,7 @@ const sendDingTalk = require('./src/sendDingTalk');
 const sendWxWork = require('./src/sendWxWork')
 const getPoint = require('./src/getPoint');
 
-const { autoGame } = require('./src/games/autoRun');
+// const { autoGame } = require('./src/games/autoRun');
 
 (async () => {
   // 上次分数
@@ -35,7 +35,7 @@ const { autoGame } = require('./src/games/autoRun');
 
   let game_res = '挖矿成功！';
   try {
-    await autoGame();
+    // await autoGame();
   } catch (error) {
     game_res = '挖矿失败！';
   }
@@ -45,9 +45,9 @@ const { autoGame } = require('./src/games/autoRun');
 
   console.log(`当前矿石：${now_score}`);
 
-  let dip_res;
+  let dip_res = '';
   try {
-    dip_res = await dipLucky();
+    // dip_res = await dipLucky();
   } catch (error) {
     dip_res = error;
   }
